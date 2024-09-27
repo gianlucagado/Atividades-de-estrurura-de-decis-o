@@ -1,0 +1,22 @@
+<script>
+  let numero = prompt(`Informe um numero`)
+   
+   let centenas = Math.floor(numero / 100);
+   let dezenas = Math.floor((numero % 100) / 10);
+   let unidades = Math.floor((numero % 100) % 10)
+   
+ 
+
+
+if (numero < 10){
+  alert(`Unidades ${unidades}`);
+}
+else if(numero < 100){
+  alert(`Dezenas ${dezenas} e Unidades ${unidades}`);
+}
+else{
+  alert(`Centenas ${centenas} Dezenas ${dezenas}  Unidades ${unidades}`);
+}
+
+ 
+</script>

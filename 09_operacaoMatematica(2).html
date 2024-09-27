@@ -1,0 +1,150 @@
+<script>
+  /*
+  PROBLEMA: OPERAÇÃO MATEMÁTICA
+  Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+  - par ou ímpar;
+  - positivo ou negativo;
+  - inteiro ou decimal.
+  */
+
+  //ENTRADA
+  let n1 = Number(prompt(`Informe 1 numero`))
+  let n2 = Number(prompt(`Informe um 2 numero`))
+  let pergunta = prompt(`Qual operação voce quer realizar? Divisão, Multiplicação, Adição, Subtração, `).toLowerCase().trim();
+
+
+  let pergunta2 = pergunta.replace(/ç/g, "c");
+
+  var pergunta3 = pergunta2.normalize("NFD").replace(/[\u0298-\u030f]/g, "");
+
+
+
+//precessamento
+  switch (pergunta3) {
+    case "divisao":
+      let calk1 = (n1 / n2) % 2 == 0 == true
+      let calk01 = (n1 / n2) >= 0 == true
+      let calk001 = Number.isInteger(n1 / n2) == true
+
+      if (calk1 == true && calk01 == true && calk001 == true) {
+        alert(`O resultado da divisao é ${n1 / n2} ele é par, positivo e inteiro`)
+
+      } else if (calk1 == true && calk01 == false && calk001 == true) {
+        alert(`O resultado da divisao é ${n1 / n2} ele é par, negativo e inteiro`)
+
+      } else if (calk1 == false && calk01 == true & calk001 == true) {
+        alert(`O resultado da divisao é ${n1 / n2} ele é impar, positivo e inteiro`)
+
+      } else if (calk1 == true && calk01 == false && calk001 == false) {
+        alert(`O resultado da divisao é ${n1 / n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+
+      } else if (calk1 == false && calk01 == true & calk001 == false) {
+        alert(`O resultado da divisao é ${n1 / n2} ele não é classificado como par ou impar, ele é positivo e decimal`)
+
+
+      } else {
+        alert(`O resultado da divisao é ${n1 / n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+      }
+
+
+      break;
+
+
+    case ('multiplicacao'):
+
+      let calk2 = (n1 * n2) % 2 == 0 == true
+      let calk02 = (n1 * n2) >= 0 == true
+      let calk002 = Number.isInteger(n1 * n2) == true
+
+      if (calk2 == true && calk02 == true && calk002 == true) {
+        alert(`O resultado da multiplicação é ${n1 * n2} ele é par, positivo e inteiro`)
+
+      } else if (calk2 == true && calk02 == false && calk002 == true) {
+        alert(`O resultado da multiplicação é ${n1 * n2} ele é par, negativo e inteiro`)
+
+      } else if (calk2 == false && calk02 == true & calk002 == true) {
+        alert(`O resultado da multiplicação é ${n1 * n2} ele é impar, positivo e inteiro`)
+
+      } else if (calk2 == true && calk02 == false && calk002 == false) {
+        alert(`O resultado da multiplicação é ${n1 * n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+
+      } else if (calk2 == false && calk02 == true & calk002 == false) {
+        alert(`O resultado da multiplição é ${n1 * n2} ele não é classificado como par ou impar, ele é positivo e decimal`)
+
+
+      } else {
+        alert(`O resultado da multiplicação é ${n1 * n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+      }
+
+
+
+      break;
+
+    case (`adicao`):
+
+      let calk3 = (n1 + n2) % 2 == 0 == true
+      let calk03 = (n1 + n2) >= 0 == true
+      let calk003 = Number.isInteger(n1 + n2) == true
+
+
+
+      if (calk3 == true && calk03 == true && calk003 == true) {
+        alert(`O resultado da adição é ${n1 + n2} ele é par, positivo e inteiro`)
+
+      } else if (calk3 == true && calk03 == false && calk003 == true) {
+        alert(`O resultado da adição é ${n1 + n2} ele é par, negativo e inteiro`)
+
+      } else if (calk3 == false && calk03 == true & calk003 == true) {
+        alert(`O resultado da adição é ${n1 + n2} ele é impar, positivo e inteiro`)
+
+      } else if (calk3 == true && calk03 == false && calk003 == false) {
+        alert(`O resultado da adição é ${n1 + n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+
+      } else if (calk3 == false && calk03 == true & calk003 == false) {
+        alert(`O resultado da adição é ${n1 + n2} ele não é classificado como par ou impar, ele é positivo e decimal`)
+
+
+      } else {
+        alert(`O resultado da adição é ${n1 + n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+      }
+
+
+      break;
+
+    case ("subtracao"):
+      let calk4 = (n1 - n2) % 2 == 0 == true
+      let calk04 = (n1 - n2) >= 0 == true
+      let calk004 = Number.isInteger(n1 - n2) == true
+
+      if (calk4 == true && calk04 == true && calk004 == true) {
+        alert(`O resultado da subtração é ${n1 - n2} ele é par, positivo e inteiro`)
+
+      } else if (calk4 == true && calk04 == false && calk004 == true) {
+        alert(`O resultado da subtração é ${n1 - n2} ele é par, negativo e inteiro`)
+
+      } else if (calk4 == false && calk04 == true & calk004 == true) {
+        alert(`O resultado da subtração é ${n1 - n2} ele é impar, positivo e inteiro`)
+
+      } else if (calk4 == true && calk04 == false && calk004 == false) {
+        alert(`O resultado da subtração é ${n1 - n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+
+      } else if (calk4 == false && calk04 == true & calk004 == false) {
+        alert(`O resultado da subtração é ${n1 - n2} ele não é classificado como par ou impar, ele é positivo e decimal`)
+
+
+      } else {
+        alert(`O resultado da subtração é ${n1 - n2} ele não é classificado como impar ou par, ele é negativo e decimal`)
+      }
+
+
+      break
+
+
+
+    default:
+      alert(`Invalido`)
+
+      break;
+
+  }
+</script>
